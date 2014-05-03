@@ -15,7 +15,7 @@ class user {
 			return TRUE;
 			}
 			else {
-				retun FALSE;
+				return FALSE;
 	}
 	public function getId() {
 		return $this->$id;
@@ -44,12 +44,22 @@ class user {
 	public function getPassword() {
 		return $this->password;
 	}
-	public function setRegDatee($regDate) {
+	public function setRegDate($regDate) {
 		$this->regDate = $regDate;
 	}	
 	public function getRegDate() {
 		return $this->regDate;
 	}
+	public function addUser() {
+         if (!empty($this->firstName)
+         	 && !empty($this->lastName)
+         	 && !empty($this->mail)
+             && !empty($this->password)
+             && !empty($this->regDate) {
+                        $query = "insert into users set username='".$this->username."', password='".md5($this->password)."', reg_date ='".$this->regDate."'";
+                        mysql_query($query);
+                }
+
 
 
 }
