@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title> Contacts </title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
     </head>
     <body>
         <div>
