@@ -13,9 +13,10 @@ class user {
 		if (is_numeric($id)) {
 			$this->id = $id;
 			return TRUE;
-			}
-			else {
-				return FALSE;
+		}
+		else {
+			return FALSE;
+		}
 	}
 	public function getId() {
 		return $this->$id;
@@ -39,7 +40,7 @@ class user {
 		return $this->mail;
 	}
 	public function setPassword($password) {
-		$this->password = $firstName;
+		$this->password = $password;
 	}	
 	public function getPassword() {
 		return $this->password;
@@ -51,14 +52,10 @@ class user {
 		return $this->regDate;
 	}
 	public function addUser() {
-         if (!empty($this->firstName)
-         	 && !empty($this->lastName)
-         	 && !empty($this->mail)
-             && !empty($this->password)
-             && !empty($this->regDate)) {
-             	$query = "insert into users set firstname='".$this->firstName."', lastname='".$this->lastName.'", mail="'.$this->mail", password='".md5($this->password)."', reg_date ='".$this->regDate."'";
-                mysql_query($query);
-                }
+		if (!empty($this->firstName) && !empty($this->lastName) && !empty($this->mail) && !empty($this->password) && !empty($this->regDate)) {
+        	$query = "insert into users set firstname='".$this->firstName."', lastname='".$this->lastName.'", mail="'.$this->mail", password='".md5($this->password)."', reg_date ='".$this->regDate."'";
+        	mysql_query($query);
+  		}
+	}
 }
-
 ?>
