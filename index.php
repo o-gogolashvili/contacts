@@ -7,13 +7,20 @@
     <body>
         <div>
             <form action="" method="post">
-                <input type="text" placeholder="Enter Desired Username">
-                <input type="password" placeholder="Enter Password">
-                <input type="password" placeholder="Retype Password">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Phone Number">
-                <input type="text" placeholder="Photo URL">
+                <input type="text" placeholder="Username"><br/>
+                <input type="password" placeholder="Password"><br/>
+                <input type="submit" value="signIn"><br/>
+            </form>
+        </div>
+        <div>
+            <form action="" method="post">
+                <input type="text" placeholder="Enter Desired Username"><br/>
+                <input type="password" placeholder="Enter Password"><br/>
+                <input type="password" placeholder="Retype Password"><br/>
+                <input type="text" placeholder="First Name"><br/>
+                <input type="text" placeholder="Last Name"><br/>
+                <input type="text" placeholder="Phone Number"><br/>
+                <input type="text" placeholder="Photo URL"><br/>
                 <input type="submit" value="signUp">
             </form>
         </div>
