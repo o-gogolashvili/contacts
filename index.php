@@ -9,7 +9,7 @@
             <form action="" method="post">
                 <input type="text" placeholder="Username"><br/>
                 <input type="password" placeholder="Password"><br/>
-                <input type="submit" value="signIn"><br/>
+                <input type="submit" value="signIn"><hr/>
             </form>
         </div>
         <div>
