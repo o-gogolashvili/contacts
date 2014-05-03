@@ -1,3 +1,18 @@
+<?php
+    
+    require('models/user.php');
+
+    if(isset($_POST['signUp'])) {
+        require('modules/config.php');
+        require('modules/connect.php');
+        require('modules/signup.php');
+    }
+    if(isset($_POST['signIn'])) {
+        //აქ დასამატებელია აუთენტიკაცია
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,9 +25,9 @@
     <body>
         <div>
             <form action="" method="post">
-                <input type="text" placeholder="E-Mail"/><br/>
-                <input type="password" placeholder="Password"/><br/>
-                <input type="submit" value="signIn"/><hr/>
+                <input name="mail" type="text" placeholder="E-Mail"/><br/>
+                <input name="password" type="password" placeholder="Password"/><br/>
+                <input name="signIn" type="submit" value="signIn"/><hr/>
             </form>
         </div>
         <div>
@@ -21,7 +36,7 @@
                 <input name="firstName" type="text" placeholder="First Name"/><br/>
                 <input name="lastName" type="text" placeholder="Last Name"/><br/>
                 <input name="password" type="password" placeholder="Password"/><br/>
-                <input type="submit" value="signUp"/>
+                <input name="signUp"type="submit" value="signUp"/>
             </form>
         </div>
     </body>
