@@ -17,13 +17,11 @@
         </div>
         <div>
             <form action="" method="post">
-                <input type="text" placeholder="Enter Desired Username"/><br/>
-                <input type="password" placeholder="Enter Password"/><br/>
-                <input type="password" placeholder="Retype Password"/><br/>
+                <input type="text" placeholder="E-mail"/><br/>
                 <input type="text" placeholder="First Name"/><br/>
                 <input type="text" placeholder="Last Name"/><br/>
-                <input type="text" placeholder="Phone Number"/><br/>
-                <input type="text" placeholder="Photo URL"/><br/>
+                <input type="password" placeholder="Password"/><br/>
+                <input type="password" placeholder="Repeat Password"/><br/>
                 <input type="submit" value="signUp"/>
             </form>
         </div>
