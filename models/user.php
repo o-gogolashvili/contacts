@@ -23,7 +23,7 @@ class user {
 	public function setFirstName($firstName) {
 		$this->firstName = $firstName;
 	}	
-	public function getFistName() {
+	public function getFirstName() {
 		return $this->firstName;
 	}
 	public function setLastName($lastName) {
@@ -39,12 +39,12 @@ class user {
 		return $this->mail;
 	}
 	public function setPassword($password) {
-		$this->password = md5($firstName);
+		$this->password = $firstName;
 	}	
 	public function getPassword() {
 		return $this->password;
 	}
-	public function setRegDate($regDate) {
+	public function setRegDatee($regDate) {
 		$this->regDate = $regDate;
 	}	
 	public function getRegDate() {
@@ -55,13 +55,10 @@ class user {
          	 && !empty($this->lastName)
          	 && !empty($this->mail)
              && !empty($this->password)
-             && !empty($this->regDate) {
-                        $query = "insert into users set username='".$this->username."', password='".md5($this->password)."', reg_date ='".$this->regDate."'";
-                        mysql_query($query);
+             && !empty($this->regDate)) {
+             	$query = "insert into users set firstname='".$this->firstName."', lastname='".$this->lastName.'", mail="'.$this->mail", password='".md5($this->password)."', reg_date ='".$this->regDate."'";
+                mysql_query($query);
                 }
-
-
-
 }
 
 ?>
