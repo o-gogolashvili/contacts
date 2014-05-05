@@ -41,11 +41,11 @@
 	
 	if (empty($message)) {
 		$user->addUser();
-		print('Registration Successful! You now can Sign In');
+		print('<div class="alert alert-success"> Registration Successful! You now can Sign In </div>');
 	}
 	else {
 		foreach ($message as $comment) {
-			print ($comment.'<br />');
+			print ('<div class="alert alert-danger">'.$comment.'</div>');
 		}
 	}
 ?>

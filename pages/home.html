@@ -1,17 +1,27 @@
-<div>
-    <form action="" method="post">
-        <input name="mail" type="text" placeholder="E-Mail" autofocus/><br/>
-        <input name="password" type="password" placeholder="Password"/><br/>
-        <input name="signIn" type="submit" value="Log In"/><hr/>
-    </form>
-</div>
-<div>
-    <form action="" method="post">
-        <input name="mail" type="text" placeholder="E-mail"/><br/>
-        <input name="firstName" type="text" placeholder="First Name"/><br/>
-        <input name="lastName" type="text" placeholder="Last Name"/><br/>
-        <input name="password" type="password" placeholder="Password"/><br/>
-     	<input name="rePassword" type="password" placeholder="Re-enter Password"/><br/>
-        <input name="signUp"type="submit" value="Sign Up"/>
-    </form>
-</div>
+<div class="container">
+    <div class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"> CONTACTS </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right" role="form" action="" method="post">
+                    <input class="form-control" name="mail" type="text" placeholder="Email" autofocus/>
+                    <input class="form-control" name="password" type="password" placeholder="Password"/>
+                    <input class="btn btn-success" name="signIn" type="submit" value="Log In"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <form class="form-signup" action="" method="post" role="form">
+            <h2 class=""> Create an account </h2>
+            <input class="form-control" name="mail" type="text" placeholder="Email"/><br/>
+            <input class="form-control" name="firstName" type="text" placeholder="First Name"/><br/>
+            <input class="form-control" name="lastName" type="text" placeholder="Last Name"/><br/>
+            <input class="form-control" name="password" type="password" placeholder="Password"/><br/>
+         	<input class="form-control" name="rePassword" type="password" placeholder="Re-enter Password"/><br/>
+            <input class="btn btn-success" name="signUp" type="submit" value="Sign Up"/>
+        </form>
+    <!--/div, this div is closed in index.php-->
+<!--/div, this div is closed in index.php -->

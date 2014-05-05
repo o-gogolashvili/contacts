@@ -12,7 +12,7 @@
                 header('location: index');
             }
             else {
-                print('Incorrect login details');
+                print('<div class="alert alert-danger">Incorrect login details</div>');
             }
         }
     }
