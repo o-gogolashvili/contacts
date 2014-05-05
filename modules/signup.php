@@ -4,8 +4,8 @@
 	if (!empty($_POST['mail'])) {
 		$query = "select * from contacts where mail='".$_POST['mail']."'";
 		if($result = mysql_query($query)) {
-			$user = mysql_fetch_array($result);
-			if(!empty($user)) {
+			$arr = mysql_fetch_array($result);
+			if(!empty($arr)) {
 				$message[] = 'Username already exists';
 			} else {
 				$user->setMail($_POST['mail']);
@@ -28,7 +28,7 @@
 	} else {
 		$user->setPassword($_POST['password']);
 	}
-	$user->setRegDate(date('Y-m-d H:I:s'));
+	$user->setRegDate(date('Y-m-d H:i:s'));
 	
 	if (empty($message)) {
 		$user->addUser();
