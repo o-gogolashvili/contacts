@@ -32,12 +32,12 @@
 	
 	if (empty($message)) {
 		$user->addUser();
+		print('Registration Successful! Now you can Sign In');
+
 	} else {
 		foreach ($message as $comment) {
 			print ($comment.'<br />');
 		}
 	}
-
-	print('Registration Successful! Now you can Sign In');
 
 ?>
