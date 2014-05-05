@@ -6,9 +6,12 @@
         require('modules/config.php');
         require('modules/connect.php');
         require('modules/signup.php');
+
     }
     if(isset($_POST['signIn'])) {
-        //აქ დასამატებელია აუთენტიკაცია
+	require('modules/config.php');
+        require('modules/connect.php');
+        require('modules/signin.php');
     }
 ?>
 
