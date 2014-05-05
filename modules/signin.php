@@ -9,7 +9,7 @@
             if(!empty($user)) {
                 $_SESSION['mail'] = $user['mail'];
                 $_SESSION['id'] = $user['id'];
-                header('location: index');
+                header('location: contacts/index.php');
             }
             else {
                 print('<div class="alert alert-danger">Incorrect login details</div>');
