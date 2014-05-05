@@ -52,7 +52,11 @@ class user {
 		return $this->regDate;
 	}
 	public function addUser() {
-		if (!empty($this->firstName) && !empty($this->lastName) && !empty($this->mail) && !empty($this->password) && !empty($this->regDate)) {
+		if (!empty($this->firstName)
+			&& !empty($this->lastName)
+			&& !empty($this->mail)
+			&& !empty($this->password)
+			&& !empty($this->regDate)) {
         	$query = "insert into contacts set firstname='".$this->firstName."', lastname='".$this->lastName."', mail='".$this->mail."', password='".md5($this->password)."', reg_date ='".$this->regDate."'";
         	mysql_query($query);
   		}

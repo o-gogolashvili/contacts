@@ -6,38 +6,46 @@
 		if($result = mysql_query($query)) {
 			$arr = mysql_fetch_array($result);
 			if(!empty($arr)) {
-				$message[] = 'Username already exists';
+				$message[] = 'E-mail is already taken';
 			} else {
 				$user->setMail($_POST['mail']);
 			}
 		}
-	} else { $message[] = 'Enter your mail';
+	} 
+	else { 
+		$message[] = 'Enter your e-mail';
 	}
 	if (!empty($_POST['firstName'])) {
-	$user->setFirstName($_POST['firstName']);
-	} else { $message[] = 'Enter your first name';
+		$user->setFirstName($_POST['firstName']);
+	}
+	else {
+		$message[] = 'Enter your first name';
 	}
 	if (!empty($_POST['lastName'])) {
-	$user->setLastName($_POST['lastName']);
-	} else { $message[] = 'Enter your last name';
+		$user->setLastName($_POST['lastName']);
+	}
+	else {
+		$message[] = 'Enter your last name';
 	}
 	if(empty($_POST['password'])) {
 		$message[] = 'Enter password';
-	} elseif($_POST['password'] != $_POST['rePassword']) {
+	}
+	elseif($_POST['password'] != $_POST['rePassword']) {
 		$message[] = 'Passwords do not match';
-	} else {
+	}
+	else {
 		$user->setPassword($_POST['password']);
 	}
+	
 	$user->setRegDate(date('Y-m-d H:i:s'));
 	
 	if (empty($message)) {
 		$user->addUser();
-		print('Registration Successful! Now you can Sign In');
-
-	} else {
+		print('Registration Successful! You now can Sign In');
+	}
+	else {
 		foreach ($message as $comment) {
 			print ($comment.'<br />');
 		}
 	}
-
 ?>
