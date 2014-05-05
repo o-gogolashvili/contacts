@@ -1,2 +1,2 @@
-RewriteEngine On
+RewriteEngine Off
 RewriteRule ^(.*)$ index.php?page=$1 [L,QSA]
