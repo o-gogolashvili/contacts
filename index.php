@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <title> Contacts </title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/signup.css">
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
