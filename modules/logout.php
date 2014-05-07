@@ -3,6 +3,6 @@
 	$_SESSION = array();
 	session_destroy();
 
-	header('location: /contacts/index.php');
+	header('location: /index.php');
 
 ?>
