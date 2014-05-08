@@ -34,7 +34,7 @@
         ?>
         <form class="form-signup" action="" method="post" role="form">
             <h2 class="form-signup-heading"> Create an account </h2>
-            <input class="form-control" name="mail" type="email" placeholder="Email" required/>
+            <input class="form-control" name="mail" type="email" placeholder="Email" required />
             <input class="form-control" name="firstName" type="text" placeholder="First Name"/>
             <input class="form-control" name="lastName" type="text" placeholder="Last Name"/>
             <input class="form-control" name="password" type="password" placeholder="Password"/>
