@@ -21,7 +21,7 @@
             session_start();
 
                 if(!empty($_SESSION['mail'])) {
-                    print('Logged in with <b>'.$_SESSION['mail'].'</b> <a href="modules/logout.php"> Log Out </a>');
+                    require('pages/usercontent.php');
                 }
                 else {
                     require('pages/home.php');
