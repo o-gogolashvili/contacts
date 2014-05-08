@@ -12,29 +12,20 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-<?php
-    
-    require('models/user.php');
-    require('modules/config.php');
-    require('modules/connect.php');
-    
-    session_start();
+        <?php
+            
+            require('models/user.php');
+            require('modules/config.php');
+            require('modules/connect.php');
+            
+            session_start();
 
-        if(!empty($_SESSION['mail'])) {
-            print('Logged in with <b>'.$_SESSION['mail'].'</b> <a href="modules/logout.php"> Log Out </a>');
-        }
-        else {
-            require('pages/home.html');
-        }
-
-    if(isset($_POST['signUp'])) {
-        require('modules/signup.php');
-    }
-    if(isset($_POST['signIn'])) {
-        require('modules/signin.php');
-    }
-?>          
-            </div>
-        </div>
+                if(!empty($_SESSION['mail'])) {
+                    print('Logged in with <b>'.$_SESSION['mail'].'</b> <a href="modules/logout.php"> Log Out </a>');
+                }
+                else {
+                    require('pages/home.php');
+                }
+        ?>
     </body>
 </html>
