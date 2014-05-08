@@ -24,6 +24,14 @@
         </div>
     </div>
     <div class="jumbotron">
+        <?php
+            if(isset($_POST['signUp'])) {
+                require('modules/signup.php');
+            }
+            if(isset($_POST['signIn'])) {
+                require('modules/signin.php');
+            }
+        ?>
         <form class="form-signup" action="" method="post" role="form">
             <h2 class="form-signup-heading"> Create an account </h2>
             <input class="form-control" name="mail" type="email" placeholder="Email" required/>
@@ -33,5 +41,5 @@
          	<input class="form-control" name="rePassword" type="password" placeholder="Re-enter Password"/>
             <input class="btn btn-success" name="signUp" type="submit" value="Sign Up"/>
         </form>
-    <!--/div, this div is closed in index.php-->
-<!--/div, this div is closed in index.php -->
+    </div>
+</div>
