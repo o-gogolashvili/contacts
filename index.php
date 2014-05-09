@@ -21,7 +21,7 @@
             session_start();
 
                 if(!empty($_SESSION['mail'])) {
-                    if(isset($_GET['query']) && $_GET['query']=='logout') {
+                    if(isset($_GET['action']) && $_GET['action']=='logout') {
                         require('modules/logout.php');
                     }
                     else {
