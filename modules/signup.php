@@ -2,7 +2,7 @@
 
 	$user = new user();
 	if (!empty($_POST['mail'])) {
-		$query = "select * from contacts where mail='".$_POST['mail']."'";
+		$query = "select * from users where mail='".$_POST['mail']."'";
 		if($result = mysql_query($query)) {
 			$arr = mysql_fetch_array($result);
 			if(!empty($arr)) {

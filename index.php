@@ -21,7 +21,12 @@
             session_start();
 
                 if(!empty($_SESSION['mail'])) {
-                    require('pages/usercontent.php');
+                    if(isset($_GET['query']) && $_GET['query']=='logout') {
+                        require('modules/logout.php');
+                    }
+                    else {
+                        require('pages/usercontent.php');
+                    }
                 }
                 else {
                     require('pages/home.php');

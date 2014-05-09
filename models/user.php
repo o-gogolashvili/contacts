@@ -57,7 +57,7 @@ class user {
 			&& !empty($this->mail)
 			&& !empty($this->password)
 			&& !empty($this->regDate)) {
-        	$query = "insert into contacts set firstname='".$this->firstName."', lastname='".$this->lastName."', mail='".$this->mail."', password='".md5($this->password)."', reg_date ='".$this->regDate."'";
+        	$query = "INSERT INTO users SET first_name='".$this->firstName."', last_name='".$this->lastName."', mail='".$this->mail."', password='".md5($this->password)."', reg_date ='".$this->regDate."'";
         	mysql_query($query);
   		}
 	}
