@@ -9,15 +9,15 @@
                     <div class="form-group">
                         <input class="form-control" name="mail" type="email" placeholder="Email" tabindex="1" autofocus/><br/>
                         <div class="form-refs">
-				<input type="checkbox" name="remember" value="0" tabindex="3"> Remember me
-			</div>
+				            <input type="checkbox" name="remember" value="0" tabindex="3"> Remember me
+                        </div>
                     </div>
                     <div class="form-group">
-			<input class="form-control" name="password" type="password" placeholder="Password" tabindex="2"/>
-			<input class="btn btn-success" name="signIn" type="submit" value="Log In" tabindex="4"/><br/>
+                        <input class="form-control" name="password" type="password" placeholder="Password" tabindex="2"/>
+                        <input class="btn btn-success" name="signIn" type="submit" value="Log In" tabindex="4"/><br/>
                         <div class="form-refs">
-				<a href="#"> Forgot your password?</a>
-			</div>
+				            <a href="#"> Forgot your password?</a>
+                        </div>
                     </div>
                 </form>
             </div>
