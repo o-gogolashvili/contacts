@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/signup.css">
         <script src="js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     </head>
     <body>
         <?php
@@ -21,12 +22,7 @@
             session_start();
 
                 if(!empty($_SESSION['mail'])) {
-                    if(isset($_GET['action']) && $_GET['action']=='logout') {
-                        require('modules/logout.php');
-                    }
-                    else {
-                        require('pages/usercontent.php');
-                    }
+                    require('pages/usercontent.php');
                 }
                 else {
                     require('pages/home.php');
