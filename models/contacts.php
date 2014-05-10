@@ -15,28 +15,33 @@ class contacts {
 	private $facebook;
 	private $twitter;
 
+
+	//general set function
 	public function __set($property, $value) {
 		$functionName = 'set'.ucfirst($property);
 		if (method_exists($functionName)) {
-			$this->functionName();
-		} else {
-			$this->property = $value;
+			$this->$functionName($value);
+		}
+		else {
+			$this->$property = $value;
 		}
 	}
 
+	//general get function
 	public function __get($property) {
 		$functionName = 'get'.ucfirst($property);
 		if (method_exists($functionName)) {
-			$this->funtionName();
-		} else {
+			$this->$funtionName();
+		}
+		else {
 			if (property_exists($this, $property)) {
-				return $this->property;
+				return $this->$property;
 			}
 		}
 	}
 
 	public function addContact() {
-		$query = "insert into contacts set user_id='".$_SESSION['id']."', contact_id='".$this->id."'";
+		$query = "INSERT INTO contacts SET user_id='".$_SESSION['id']."', contact_id='".$this->id."'";
 		mysql_query($query);
 	}
 
@@ -45,7 +50,7 @@ class contacts {
 	}
 
 	public function deleteContact() {
-		$query = "delete from contacts where contqct_id='".$this->id."'";
+		$query = "DELETE FROM contacts WHERE contact_id='".$this->id."'";
 		mysql_query($query);
 	}
 }
