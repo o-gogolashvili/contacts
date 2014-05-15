@@ -1,5 +1,3 @@
-<html><head><link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/signup.css"></head>
 <div class="container">
     <div class="navbar navbar-default">
         <div class="container-fluid">
@@ -44,4 +42,4 @@
             <input class="btn btn-success" name="signUp" type="submit" value="Sign Up"/>
         </form>
     </div>
-</div></html>
+</div>
