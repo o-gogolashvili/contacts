@@ -42,6 +42,7 @@ class contacts {
 
 	public function setInformation() {
 		$this->id = $_SESSION['id'];
+		$this->contactId = $_GET['contactId'];
 		$this->firstName = $_POST['firstName'];
 		$this->lastName = $_POST['firstName'];
 		$this->mobilePhone = $_POST['firstName'];
