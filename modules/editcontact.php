@@ -1,6 +1,6 @@
 <?php
 
-	$contact = new contacts();
+	$contact = new contact();
 
 	$contact->setInformation();
 	$contact->editContact();

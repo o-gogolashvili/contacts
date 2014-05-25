@@ -1,6 +1,6 @@
 <?php
 
-class contacts {
+class contact {
 	private $id;
 	private $contactId;
 	private $firstName;
