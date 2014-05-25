@@ -1,6 +1,10 @@
 <div class="container">
 	<div class="jumbotron">
 		<form class="form-signup" action="" method="post" role="form">
+			<div class="form-group">
+				<label for="exampleInputFile">Photo</label>
+				<input type="file" name="file" id="file">
+			</div>
 			<input class="form-control" name="firstName" type="text" placeholder="First Name" />
 			<input class="form-control" name="lastName" type="text" placeholder="Last Name" />
 			<input class="form-control" name="mobilePhone" type="number" placeholder="Mobile Phone" />
@@ -25,7 +29,7 @@
 	//require('models/contacts.php');
 
 	$contact = new contacts();
-
+	require ('upload_photo.php');
 	$contact->setInformation();
 	$contact->addContact();
 

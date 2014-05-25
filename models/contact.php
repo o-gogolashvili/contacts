@@ -60,7 +60,7 @@ class contacts {
 				contact_last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", home_phone = ".$this->homePhone.", office_phone = ".$this->officePhone.", 
 				photo = '".$this->photo."', birth_date = ".$this->birthDate.", sex =".$this->sex.", job = '".$this->job."', facebook = '".$this->facebook."', 
 				twitter = '".$this->twitter."'";
-		mysql_query($query);
+		if(mysql_query($query));
 	}
 
 	public function editContact() {
