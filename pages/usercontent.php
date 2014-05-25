@@ -33,6 +33,9 @@
                         require('modules/editcontact.php');
                     }
                 }
+                else {
+                    require('modules/contactlist.php');
+                }
 	        ?>
     </div>
     <!-- These scripts are also included in index.php, but they do not work -->

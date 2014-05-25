@@ -8,9 +8,10 @@
 			<input class="form-control" name="officePhone" type="number" placeholder="Office Phone" />
 			<input class="form-control" name="birthDate" type="date" placeholder="Birth Date" />
 			<label class="radio-inline">
-				<input class="form-control" type="radio" name="sex" value="1" /> Male</label>
+				<input class="form-control" type="radio" name="sex" value="1" /> Male
+			</label>
 			<label class="radio-inline">
-			<input class="form-control" type="radio" name="sex" value="0" /> Female
+				<input class="form-control" type="radio" name="sex" value="0" /> Female
 			</label>
 			<input class="form-control" name="job" type="text" placeholder="Job" />
 			<input class="form-control" name="facebook" type="text" placeholder="Facebook" />
@@ -22,15 +23,11 @@
 
 <?php
 	
-<<<<<<< HEAD
-	$contact = new contact();
-=======
-	//require('models/contacts.php');
-
-	$contact = new contacts();
->>>>>>> 4341db494d8fe04e5a0d3b99e916bc59a019b40c
-
-	$contact->setInformation();
-	$contact->addContact();
+	if(isset($_POST['addContact'])) {
+		$contact = new contact();
+		
+		$contact->setInformation();
+		$contact->addContact();
+	}
 
 ?>
