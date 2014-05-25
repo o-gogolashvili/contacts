@@ -43,28 +43,28 @@ class contact {
 	public function setInformation() {
 		$this->id = $_SESSION['id'];
 		$this->firstName = $_POST['firstName'];
-		$this->lastName = $_POST['firstName'];
-		$this->mobilePhone = $_POST['firstName'];
-		$this->homePhone = $_POST['firstName'];
-		$this->officePhone = $_POST['firstName'];
-		$this->photo = $_POST['firstName'];
-		$this->birthDate = $_POST['firstName'];
-		$this->sex = $_POST['firstName'];
-		$this->job = $_POST['firstName'];
-		$this->facebook = $_POST['firstName'];
-		$this->twitter = $_POST['firstName'];
+		$this->lastName = $_POST['lastName'];
+		$this->mobilePhone = $_POST['mobilePhone'];
+		$this->homePhone = $_POST['homePhone'];
+		$this->officePhone = $_POST['officePhone'];
+		//$this->photo = $_POST['photo'];
+		$this->birthDate = $_POST['birthDate'];
+		$this->sex = $_POST['sex'];
+		$this->job = $_POST['job'];
+		$this->facebook = $_POST['facebook'];
+		$this->twitter = $_POST['twitter'];
 	}
 
 	public function addContact() {
-		$query = "INSERT INTO contacts SET user_id= ".$this->id.", first_name = '".$this->firstName."', 
-				last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", home_phone = ".$this->homePhone.", office_phone = ".$this->officePhone.", 
+		$query = "INSERT INTO contacts SET user_id= ".$this->id.", contact_first_name = '".$this->firstName."', 
+				contact_last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", home_phone = ".$this->homePhone.", office_phone = ".$this->officePhone.", 
 				photo = '".$this->photo."', birth_date = ".$this->birthDate.", sex =".$this->sex.", job = '".$this->job."', facebook = '".$this->facebook."', 
 				twitter = '".$this->twitter."'";
 		mysql_query($query);
 	}
 
 	public function editContact() {
-		$query = "UPDATE INTO contacts SET first_name = '".$this->firstName."', last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", 
+		$query = "UPDATE INTO contacts SET contact_first_name = '".$this->firstName."', contact_last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", 
 				home_phone = ".$this->homePhone.", office_phone = ".$this->officePhone.", photo = '".$this->photo."', birth_date = ".$this->birthDate.", 
 				sex =".$this->sex.", job = '".$this->job."', facebook = '".$this->facebook."', twitter = '".$this->twitter."' where contact_id = ".$this->contactId;
 		mysql_query($query);

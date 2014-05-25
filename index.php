@@ -16,6 +16,7 @@
         <?php
             
             require('models/user.php');
+            require('models/contacts.php');
             require('modules/config.php');
             require('modules/connect.php');
             
