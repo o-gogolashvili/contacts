@@ -1,5 +1,11 @@
 <div class="container">
 	<div class="jumbotron">
+		<form action="modules/upload_photo.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="submit" value="Submit">
+</form>
 		<form class="form-signup" action="" method="post" role="form">
 			<input class="form-control" name="firstName" type="text" placeholder="First Name" />
 			<input class="form-control" name="lastName" type="text" placeholder="Last Name" />
@@ -22,7 +28,7 @@
 </div>
 
 <?php
-
+	
 	if(isset($_POST['addContact'])) {
 		$contact = new contact();
 
