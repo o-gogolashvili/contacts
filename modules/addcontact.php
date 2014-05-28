@@ -1,18 +1,14 @@
 <div class="container">
 	<div class="jumbotron">
-		<form action="modules/upload_photo.php" method="post"
-enctype="multipart/form-data">
-<label for="file">Filename:</label>
-<input type="file" name="file" id="file"><br>
-<input type="submit" name="submit" value="Submit">
-</form>
-		<form class="form-signup" action="" method="post" role="form">
+		<form class="form-signup" action="" method="post" role="form" enctype="multipart/form-data">
+			<label for="file">Upload Photo:</label>
+			<input type="file" name="file" id="file"><br>
 			<input class="form-control" name="firstName" type="text" placeholder="First Name" />
 			<input class="form-control" name="lastName" type="text" placeholder="Last Name" />
 			<input class="form-control" name="mobilePhone" type="number" placeholder="Mobile Phone" />
 			<input class="form-control" name="homePhone" type="number" placeholder="Home Phone" />
 			<input class="form-control" name="officePhone" type="number" placeholder="Office Phone" />
-			<input class="form-control" name="birthDate" type="date" placeholder="Birth Date" />
+			<input class="form-control" name="birthDate" type="date" value="2014-05-28" placeholder="Birth Date" />
 			<label class="radio-inline">
 				<input class="form-control" type="radio" name="sex" value="1" /> Male
 			</label>
@@ -31,6 +27,7 @@ enctype="multipart/form-data">
 	
 	if(isset($_POST['addContact'])) {
 		$contact = new contact();
+		require('upload_photo.php');
 
 		$contact->setInformation();
 		$contact->addContact();

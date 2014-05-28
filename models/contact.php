@@ -19,7 +19,7 @@ class contact {
 	//general set function
 	public function __set($property, $value) {
 		$functionName = 'set'.ucfirst($property);
-		if (method_exists($functionName)) {
+		if (method_exists($this, $functionName)) {
 			$this->$functionName($value);
 		}
 		else {
@@ -30,7 +30,7 @@ class contact {
 	//general get function
 	public function __get($property) {
 		$functionName = 'get'.ucfirst($property);
-		if (method_exists($functionName)) {
+		if (method_exists($this, $functionName)) {
 			$this->$funtionName();
 		}
 		else {
