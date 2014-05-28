@@ -2,7 +2,7 @@
     <div class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"> CONTACTS </a>
+                <a class="navbar-brand" href="index.php"> CONTACTS </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -38,7 +38,4 @@
                 }
 	        ?>
     </div>
-    <!-- These scripts are also included in index.php, but they do not work -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </div>
