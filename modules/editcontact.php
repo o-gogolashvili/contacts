@@ -1,5 +1,5 @@
 <?php
-	$info = mysql_query("select * from contacts where contact_id =".$_GET['id'].);
+	$info = mysql_query("SELECT * FROM contacts WHERE contact_id='".$_GET['id']."'");
 	if ($_SESSION['id'] == $info['user_id']) {
 ?>
 
@@ -31,5 +31,3 @@
 <?php 
 	} 
 ?>
-
-<?php
