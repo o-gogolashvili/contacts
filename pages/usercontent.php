@@ -7,7 +7,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="">Giorgi Botsvadze</a> <!-- aq unda iyos dinamiurad daloginebulis saxeli gvari -->
+                        <a href="index.php"><b><?php
+                                $user = mysql_query("SELECT * FROM users WHERE id='".$_SESSION['id']."'");
+                                $user = mysql_fetch_array($user);
+                                print($user['first_name'].' '.$user['last_name']);
+                            ?></b></a> <!-- Dynamically generated user's fist and last names -->
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
