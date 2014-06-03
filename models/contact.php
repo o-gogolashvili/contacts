@@ -42,6 +42,7 @@ class contact {
 
 	public function setInformation() {
 		$this->id = $_SESSION['id'];
+		$this->contactId = $_GET['id'];
 		$this->firstName = $_POST['firstName'];
 		$this->lastName = $_POST['lastName'];
 		$this->mobilePhone = $_POST['mobilePhone'];
@@ -64,7 +65,7 @@ class contact {
 	}
 
 	public function editContact() {
-		$query = "UPDATE INTO contacts SET contact_first_name = '".$this->firstName."', contact_last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", 
+		$query = "UPDATE contacts SET contact_first_name = '".$this->firstName."', contact_last_name = '".$this->lastName."', mobile_phone = ".$this->mobilePhone.", 
 				home_phone = ".$this->homePhone.", office_phone = ".$this->officePhone.", photo = '".$this->photo."', birth_date = ".$this->birthDate.", 
 				sex =".$this->sex.", job = '".$this->job."', facebook = '".$this->facebook."', twitter = '".$this->twitter."' where contact_id = ".$this->contactId;
 		mysql_query($query);
