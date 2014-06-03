@@ -9,8 +9,8 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" data-target="#" href="index.php">Contacts <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="index.php?action=addcontact">Add Contact</a></li>
-                            <li><a href="index.php?action=editcontact">Edit Contacts</a></li>
+                            <li><a href="index.php?action=addcontact"><span class="glyphicon glyphicon-plus"></span> Add Contact</a></li>
+                            <li><a href="index.php?action=listcontacts"><span class="glyphicon glyphicon-list"></span> List contacts</a></li>
                         </ul>
                     </li>
                     <li><a href="index.php?action=logout">Log Out</a></li>
@@ -29,8 +29,8 @@
                     if($_GET['action']=='addcontact') {
                         require('modules/addcontact.php');
                     }
-                    if($_GET['action']=='editcontact') {
-                        require('modules/editcontact.php');
+                    if($_GET['action']=='listcontacts') {
+                        require('modules/contactlist.php');
                     }
                 }
                 else {
