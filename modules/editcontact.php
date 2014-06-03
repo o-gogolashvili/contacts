@@ -33,12 +33,13 @@
 <?php 
 	}
 
-	if(isset($_POST['addContact'])) {
+	if(isset($_POST['editContact'])) {
 		$contact = new contact();
 		require('upload_photo.php');
 
 		$contact->setInformation();
 		$contact->editContact();
+		header ("location: index.php");
 	}
 ?>
 
