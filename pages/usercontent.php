@@ -9,8 +9,8 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" data-target="#" href="index.php">Contacts <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="index.php?action=listcontacts"><span class="glyphicon glyphicon-list"></span> List Contacts</a></li>
                             <li><a href="index.php?action=addcontact"><span class="glyphicon glyphicon-plus"></span> Add Contact</a></li>
-                            <li><a href="index.php?action=listcontacts"><span class="glyphicon glyphicon-list"></span> List contacts</a></li>
                         </ul>
                     </li>
                     <li><a href="index.php?action=logout">Log Out</a></li>
