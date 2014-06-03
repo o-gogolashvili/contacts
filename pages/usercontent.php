@@ -5,6 +5,11 @@
                 <a class="navbar-brand" href="index.php"> CONTACTS </a>
             </div>
             <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="">Giorgi Botsvadze</a> <!-- aq unda iyos dinamiurad daloginebulis saxeli gvari -->
+                    </li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a data-toggle="dropdown" data-target="#" href="index.php">Contacts <span class="caret"></span></a>
@@ -19,23 +24,25 @@
         </div>
     </div>
     <div class="jumbotron">
-	        <?php
-				print('Logged in with <b>'.$_SESSION['mail'].'</b>');
-	            //user content modules here
-                if(isset($_GET['action'])) {
-                    if($_GET['action']=='logout') {
-                        require('modules/logout.php');
-                    }
-                    if($_GET['action']=='addcontact') {
-                        require('modules/addcontact.php');
-                    }
-                    if($_GET['action']=='listcontacts') {
-                        require('modules/contactlist.php');
-                    }
+        <?php
+            //user content modules here
+            if(isset($_GET['action'])) {
+                if($_GET['action']=='logout') {
+                    require('modules/logout.php');
                 }
-                else {
+                if($_GET['action']=='addcontact') {
+                    require('modules/addcontact.php');
+                }
+                if($_GET['action']=='listcontacts') {
                     require('modules/contactlist.php');
                 }
-	        ?>
+                if($_GET['action']=='editcontact') {
+                    require('modules/editcontact.php');
+                }
+            }
+            else {
+                require('modules/contactlist.php');
+            }
+        ?>
     </div>
 </div>
