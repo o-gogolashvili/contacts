@@ -14,6 +14,9 @@
                             ?></b></a> <!-- Dynamically generated user's fist and last names -->
                     </li>
                 </ul>
+                <form class="navbar-form navbar-left">
+                    <input class="form-control" placeholder="Search">
+                </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a data-toggle="dropdown" data-target="#" href="index.php">Contacts <span class="caret"></span></a>
