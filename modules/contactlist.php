@@ -1,7 +1,22 @@
 <?php
-	
-	$query = "SELECT * FROM contacts WHERE user_id ='".$_SESSION['id']."' order by contact_last_name, contact_first_name";
-	$result = mysql_query($query);
+	if(isset($_POST['searchTerm'])) {
+		$searchTerm = trim($_POST['searchTerm']);
+		$query = "SELECT * FROM contacts WHERE 
+					user_id ='".$_SESSION['id']."' AND 
+					(contact_first_name LIKE '".$searchTerm."%' OR
+					contact_last_name LIKE '".$searchTerm."%' OR
+					mobile_phone LIKE '".$searchTerm."%' OR
+					home_phone LIKE '".$searchTerm."%' OR
+					office_phone LIKE '".$searchTerm."%' OR
+					CONCAT(contact_first_name, ' ', contact_last_name) LIKE '".$searchTerm."%' OR
+					CONCAT(contact_last_name, ' ', contact_first_name) LIKE '".$searchTerm."%')
+				order by contact_last_name, contact_first_name";
+		$result = mysql_query($query);
+	}
+	else {
+		$query = "SELECT * FROM contacts WHERE user_id ='".$_SESSION['id']."' order by contact_last_name, contact_first_name";
+		$result = mysql_query($query);
+	}
 
 ?>
 <div class="panel-group" id="accordion">

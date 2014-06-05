@@ -14,8 +14,8 @@
                             ?></b></a> <!-- Dynamically generated user's fist and last names -->
                     </li>
                 </ul>
-                <form class="navbar-form navbar-left">
-                    <input class="form-control" placeholder="Search">
+                <form action="" method="POST" class="navbar-form navbar-left">
+                    <input class="form-control" placeholder="Search" name="searchTerm">
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
