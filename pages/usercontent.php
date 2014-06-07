@@ -43,6 +43,9 @@
                 if($_GET['action']=='listcontacts') {
                     require('modules/contactlist.php');
                 }
+                 if($_GET['action']=='deletecontact') {
+                    require('modules/deletecontact.php');
+                }
                 if($_GET['action']=='editcontact') {
                     require('modules/editcontact.php');
                 }

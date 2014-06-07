@@ -29,12 +29,14 @@
 					<a data-toggle="collapse" data-parent="#accordion" href="#<?php print("cntlistitem".$contact['contact_id']); ?>">
 						<?php print($contact['contact_last_name'].' '.$contact['contact_first_name']); ?>
 					</a>
-					<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Edit" href="index.php?action=editcontact&id=<?php print($contact['contact_id']); ?>">
+		 			<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Edit" href="index.php?action=editcontact&id=<?php print($contact['contact_id']); ?>">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</a>
-					<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Delete" href="index.php?action=delete?id=<?php print($contact['contact_id']); ?>">
-						<span class="glyphicon glyphicon-trash"></span>
-					</a>
+					 <div class="pull-right">
+						<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Delete" href="index.php?action=deletecontact&id=<?php print($contact['contact_id']); ?>" onclick="return confirm('Are you sure you want to delete?');">
+							<span class="glyphicon glyphicon-trash"></span>
+						</a>
+					</div>
 				</h4>
 			</div>
 			<div id="<?php print("cntlistitem".$contact['contact_id']); ?>" class="panel-collapse collapse">
