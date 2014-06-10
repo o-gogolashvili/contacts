@@ -62,5 +62,8 @@
 		</div>
 	<?php
 		}
+		if(mysql_num_rows($result) == 0) {
+			print('<div class="alert alert-danger">Your search didn\'t match any data.</div>');
+		}
 	?>
 </div>
