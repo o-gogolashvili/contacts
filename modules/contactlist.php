@@ -32,7 +32,7 @@
 		 			<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Edit" href="index.php?action=editcontact&id=<?php print($contact['contact_id']); ?>">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</a>
-					 <div class="pull-right">
+					<div class="pull-right">
 						<a class="btn btn-default" data-toggle="tooltip" data-placement="top" data-original-title="Delete" href="index.php?action=deletecontact&id=<?php print($contact['contact_id']); ?>" onclick="return confirm('Are you sure you want to delete?');">
 							<span class="glyphicon glyphicon-trash"></span>
 						</a>
