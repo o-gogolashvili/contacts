@@ -63,7 +63,7 @@
 	<?php
 		}
 		if(mysql_num_rows($result) == 0) {
-			print('<div class="alert alert-danger">Your search didn\'t match any data.</div>');
+			print('<div class="alert alert-danger">Your search didn\'t match any data. Please check your spelling or <a class="alert-link" href="index.php?action=addcontact">create a new contact</a>.</div>');
 		}
 	?>
 </div>
